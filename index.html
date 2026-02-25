@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超级马里奥小游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🍄 超级马里奥</h1>
+            <div class="stats">
+                <span class="score">分数: <span id="score">0</span></span>
+                <span class="coins">金币: <span id="coins">0</span> 🪙</span>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+        <div class="controls">
+            <div class="control-group">
+                <span class="key">←</span>
+                <span class="key">→</span>
+                <span class="desc">移动</span>
+            </div>
+            <div class="control-group">
+                <span class="key">空格</span>
+                <span class="desc">跳跃</span>
+            </div>
+            <div class="control-group">
+                <span class="key">R</span>
+                <span class="desc">重新开始</span>
+            </div>
+        </div>
+
+        <div id="gameOver" class="game-over hidden">
+            <h2>游戏结束！</h2>
+            <p>最终分数: <span id="finalScore">0</span></p>
+            <button onclick="restartGame()">重新开始</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
